@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    image: startpage:latest
+    volumes:
+      - type: bind
+        source: ./
+        target: /var/www/html/
+    ports:
+      - 8004:80
+
+
+  php-mysql-environment:
+    container_name: php-mysql
+    image: arm64v8/mysql:oracle
+    volumes:
+      - type: bind
+        source: ./mysql
+        target: /var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: php-environment
