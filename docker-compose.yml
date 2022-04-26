@@ -13,13 +13,13 @@ services:
 
   php-mysql-environment:
     container_name: php-mysql
-    image: arm64v8/mysql:oracle
+    image: mysql:oracle
     volumes:
-      - type: bind
-        source: ./mysql
-        target: /var/lib/mysql
+      - homepage_mysql:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: php-environment
+volumes:
+  homepage_mysql:
