@@ -12,4 +12,7 @@ If you want to not see the logs
 docker-compose up -d
 ```
 Submit any issues you find if you would like. <br>
-This is an "as I can" type of project where I make bug fixes as I am able to.
+This is an "as I can" type of project where I make bug fixes as I am able to. <br>
+**DISCLAIMER** <br>
+I am still very new to PHP, and there are likely many bad practices in this code. <br>
+Please do not take anything in this code base as "the way" to handle certain tasks in PHP.
